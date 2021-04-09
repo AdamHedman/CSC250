@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity
 {
     private EditText inputET;
     private TextView answerTV;
+    private int factorial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -26,6 +27,13 @@ public class MainActivity extends AppCompatActivity
         String currValue = this.inputET.getText().toString();
         this.answerTV.setText(currValue);
     }
-
+    public void calcFactorial() {
+        int num = 0;
+        if(!inputET.getText().toString().equals(""))
+            num = Integer.parseInt(inputET.getText().toString());
+        for(int i = 1; i <= num; i++){
+            factorial = i * factorial;
+        }
 
 }
+
