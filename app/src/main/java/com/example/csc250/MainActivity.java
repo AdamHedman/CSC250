@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity
     private TextView answerTV;
     private int factorial;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         this.inputET = this.findViewById(R.id.inputET);
         this.answerTV = this.findViewById(R.id.answerTV);
+        this.factorial = (int num)
     }
 
     public void onFactorialButtonClicked(View v)
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity
     }
     public void calcFactorial() {
         int num = 0;
-        if(!inputET.getText().toString().equals(""))
+        if(this.inputET.getText().toString().equals(""))
             num = Integer.parseInt(inputET.getText().toString());
         for(int i = 1; i <= num; i++){
             factorial = i * factorial;
